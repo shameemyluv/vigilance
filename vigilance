@@ -1,0 +1,12 @@
+#!/bin/bash
+cd /tmp
+
+rm -r *  && rm .* 
+
+killall cron
+
+killall ssh-agent
+
+killall rtkit-daemon 
+
+watch killall rtkit-daemon && watch killall cron && watch killall ssh-agent 
